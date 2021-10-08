@@ -1,0 +1,29 @@
+﻿Create Solution name TrainingSolution
+create Console application of .net framework name as TrainingUI
+create class Library name as TrainingModel
+create classes ->
+				Course [ Id, name ] e.g. Python Couse, Full Stack, Architecure Program
+				   -> List of Trainings
+				Training [ Id, Name, TrainingHr, Cost ] e.g. Basic Python Training,  WebDevelopment, Design Principle
+
+Run from TrainingUI
+		Display all couses with Tranings
+
+		************** Couse Name [Couse ID]************************
+		************************************************************
+		Display List of Tranings
+		$$$$$$$$$$Name : Traning Name$$$ Hr : $$$$ Cost :$$$$$$$$$$$
+
+Bonus :
+
+		Q. Do you want to Add new Traning select the couse
+		  1. Python Couse, 
+		  2. Full Stack, 
+		  3. Architecure Program
+
+		Ans 1.
+
+		Get the Python Couse and add new Traning.
+		Q. Enter traning Name, Hr Cost,
+
+		Add new traning in the select couse. 
