@@ -31,6 +31,7 @@ namespace TrainingUI
             {
                 new Course
                 {
+
                     ID=1,
                     name= "Python Course",
                 },
