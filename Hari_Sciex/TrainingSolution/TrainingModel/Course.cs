@@ -21,5 +21,10 @@ namespace TrainingModel
 		{
 
 		}
+
+		public void RemoveTraining()
+		{
+
+		}
 	}
 }

@@ -13,6 +13,9 @@ namespace TrainingModel
 		public double TrainingHr { get; set; }
 		public double Cost { get; set; }
 
+		public void AddTraining(string name, double trainingHr, double cost)
+		{
 
+		}
 	}
 }
