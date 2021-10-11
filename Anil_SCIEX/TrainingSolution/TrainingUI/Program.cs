@@ -9,42 +9,39 @@ namespace TrainingUI
 		static void Main()
 		{
 			// Aws Course
-			Course awscourse = new() { Id = 1, Name = "AWS" };
+			Course awscourse = new(new List<Training>()) { Id = 1, Name = "AWS" };
 
 			//Training available under AWS Course
-			awscourse.Trainings = new()
-			{
-				new Training() { Id = 1, Name = "AWS Basics", Cost = 6000, TrainingHours = 300 },
-				new Training() { Id = 2, Name = "AWS Developer Associate", Cost = 10000, TrainingHours = 200 },
-				new Training() { Id = 3, Name = "AWS Technical Essentials", Cost = 15000, TrainingHours = 150 },
-				new Training() { Id = 4, Name = "AWS SysOps Associate", Cost = 12000, TrainingHours = 100 }
-			};
+			awscourse.Trainings.Add(new(1,"AWS Basics",300,6000));
+			awscourse.Trainings.Add(new(2,"AWS Developer Associate",200, 10000));
+			awscourse.Trainings.Add(new(3,"AWS Technical Essentials",150, 15000));
+			awscourse.Trainings.Add(new(4,"AWS SysOps Associate",100, 12000));
+
 
 			// Python Course
-			Course pythoncourse = new() { Id = 1, Name = "Python" };
+			Course pythoncourse = new(new List<Training>()) { Id = 1, Name = "Python"};
 
 			//Training available under Python Course
-			pythoncourse.Trainings = new()
-			{
-				new Training() { Id = 1, Name = "Python Basics", Cost = 5000, TrainingHours = 350 },
-				new Training() { Id = 2, Name = "Python Developer Associate", Cost = 6000, TrainingHours = 250 },
-				new Training() { Id = 3, Name = "Python Technical Essentials", Cost = 6500, TrainingHours = 100 },
-				new Training() { Id = 4, Name = "Python Architecture", Cost = 10000, TrainingHours = 60 }
-			};
+			pythoncourse.Trainings.Add(new(1, "Python Basics",350, 5000));
+			pythoncourse.Trainings.Add(new(2,"Python Developer Associate",250, 6000));
+			pythoncourse.Trainings.Add(new(3,"Python Developer Associate",250, 6000));
+			pythoncourse.Trainings.Add(new(4,"Python Architecture",60 ,10000));
 
-			// Consultancy
-			List<Course> courses = new() { awscourse, pythoncourse };
 
-			foreach (var course in courses)
+		// Courses available under Consultancy 
+		List<Course> consultancycourses = new() { awscourse, pythoncourse };
+
+			foreach (var course in consultancycourses)
 			{
 				Console.WriteLine("*********************"+course.Name+" ["+course.Id+"] "+"***********************");
 				Console.WriteLine("********************************************************");
+				
 				foreach (var training in course.Trainings)
 				{
 					
-					Console.WriteLine("$$$$$$$$$$$ Name : "+
-					                  training.Name +"$$$$$ Training Hours : "
-					                  +training.TrainingHours +"$$$$$$$ Cost : "+training.Cost);
+					Console.WriteLine("Course Name : "+
+					                  training.Name +" -----> Training Hours : "
+					                  +training.TrainingHours +" Hours "+"-----> Cost : "+training.Cost+ " Rupees ");
 				}
 				Console.WriteLine();
 			}
