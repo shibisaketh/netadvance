@@ -37,7 +37,7 @@ namespace TrainingUI
 
 			foreach (var course in courses)
 			{
-				Console.WriteLine("*********************"+course.Name+"[]"+"***********************");
+				Console.WriteLine("*********************"+course.Name+" ["+course.Id+"] "+"***********************");
 				Console.WriteLine("***********************************************************");
 				foreach (var training in course.Trainings)
 				{
