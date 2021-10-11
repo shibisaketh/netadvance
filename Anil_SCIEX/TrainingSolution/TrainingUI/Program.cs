@@ -21,7 +21,7 @@ namespace TrainingUI
 			};
 
 			// Python Course
-			Course pythoncourse = new() { Id = 1, Name = "AWS" };
+			Course pythoncourse = new() { Id = 1, Name = "Python" };
 
 			//Training available under Python Course
 			pythoncourse.Trainings = new()
@@ -38,13 +38,15 @@ namespace TrainingUI
 			foreach (var course in courses)
 			{
 				Console.WriteLine("*********************"+course.Name+" ["+course.Id+"] "+"***********************");
-				Console.WriteLine("***********************************************************");
+				Console.WriteLine("********************************************************");
 				foreach (var training in course.Trainings)
 				{
-					Console.WriteLine("$$$$$$$$$$$ Name : "+training.Name 
-					+"$$$$$ Training Hours : "+training.TrainingHours
-					+"$$$$$$$ Cost : "+training.Cost);
+					
+					Console.WriteLine("$$$$$$$$$$$ Name : "+
+					                  training.Name +"$$$$$ Training Hours : "
+					                  +training.TrainingHours +"$$$$$$$ Cost : "+training.Cost);
 				}
+				Console.WriteLine();
 			}
 			Console.ReadKey();
 		}
